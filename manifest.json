@@ -12,7 +12,7 @@
   "permissions": [
     "storage"
   ],
-  "developer": {
+  "author": {
     "name": "Chris Spiegl",
     "url": "https://ChrisSpiegl.com"
   }
