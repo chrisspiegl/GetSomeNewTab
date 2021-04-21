@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Tab</title>
+  <meta charset='utf-8'>
+  <style>
+    @font-face {
+      font-family: 'No Safety Zone';
+      src: url('fonts/No Safety Zone.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    html, body{
+      font-family: 'No Safety Zone';
+      height: 100%;
+      min-width: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+    }
+    body{
+      background: #101318;
+      color: #222830;
+    }
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height:  100vh;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .title {
+      /*line-height:  1;*/
+      margin: 0; padding: 0;
+      text-align: center;
+      -moz-user-select:none;
+      -webkit-user-select:none;
+    }
+    .titleMain {
+      font-weight: 100;
+      font-size: clamp(6rem, -0.875rem + 20vw, 10rem);
+      text-transform: uppercase;
+    }
+    .titleSub {
+      font-weight: 100;
+      font-size: clamp(3rem, -0.875rem + 10vw, 5rem);
+      text-transform: uppercase;
+    }
+    ::selection {
+      background-color: #cc5630;
+    }
+
+    options {
+      position: fixed;
+      top:  0;
+      left:  0;
+      width:  200px;
+      margin:  1rem;
+      padding:  1rem;
+      background-color:  #222830;
+      border:  2px solid #cc5630;
+    }
+    options h2 {
+      text-align: center;
+      color:  #ffffff;
+      text-transform: uppercase;
+      -moz-user-select:none;
+      -webkit-user-select:none;
+    }
+    options button {
+      display: block;
+      width:  100%;
+    }
+  </style>
+</head>
+
+<body>
+  <main id='main'>
+    <h1 class='title titleMain' id='titleMain' unselectable='on'></h1>
+    <h2 class='title titleSub' id='titleSub' unselectable='on'></h2>
+  </main>
+  <options id='options' style='display: none;'>
+    <h2>Options</h2>
+    <p>
+      <button id='colorBackground'>Color Background</button>
+    </p>
+    <p>
+      <button id='colorText'>Color Text</button>
+    </p>
+    <p>
+      <button id='resetAll'>Reset to Defaults<br>(Text & Color)</button>
+    </p>
+    <p>
+      <button id='closeOptions'>Close Options</button>
+    </p>
+  </options>
+  <script src='vendors/vanilla-picker.min.js'></script>
+  <script src='scripts/app.js'></script>
+</body>
+</html>

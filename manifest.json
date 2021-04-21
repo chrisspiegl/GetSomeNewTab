@@ -1,0 +1,19 @@
+{
+  "name": "Get Some New Tab",
+  "version": "0.0.1",
+  "description": "Replace new tab page with a minimal dashboard featuring motivation and simplicity.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "manifest_version": 3,
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "developer": {
+    "name": "Chris Spiegl",
+    "url": "https://ChrisSpiegl.com"
+  }
+}
