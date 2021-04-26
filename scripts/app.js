@@ -5,11 +5,10 @@ async function init() {
   $titleSub = document.getElementById('titleSub')
 
   const settingsDefault = {
-    subtitle: 'DISCIPLINE EQUALS FREEDOM',
     titleMain: 'GET AFTER IT',
     titleSub: 'STANDBY TO GET SOME',
-    colorBackground: '#101318',
-    colorText: '#222830',
+    colorBackground: 'rgba(16, 19, 24, 1)',
+    colorText: 'rgba(34, 40, 48, 1)',
   }
 
   let settings = { ...settingsDefault }
@@ -26,7 +25,7 @@ async function init() {
   function saveOptions() {
     return new Promise((resolve, reject) => {
       for (const key of Object.keys(settings)) {
-        console.log(`settings[key]:`, settings[key])
+        console.log(`settings[${key}]:`, settings[key])
         settings[key] = settings[key].trim()
         if (typeof settings[key] !== 'string' || !settings[key] || settings[key] === '') {
           settings[key] = 'UNDEFINED'
@@ -51,7 +50,6 @@ async function init() {
       e.preventDefault()
       e.stopPropagation()
       console.log(`Editing:`, key)
-      console.log(`e:`, e.target)
       e.target.contentEditable = true
       e.target.focus()
       document.execCommand('selectAll',false,null)
@@ -62,7 +60,6 @@ async function init() {
     return async (e) => {
       e.preventDefault()
       console.log(`Blured:`, key)
-      console.log(`e:`, e)
       let text = e.target.innerText.trim()
       if (typeof text !== 'string' || text === '' || !text) {
         text = settingsDefault[key]
@@ -112,12 +109,9 @@ async function init() {
       parent: pickerParentColorText,
       color: settings.colorText,
     })
-
     function pickerOnChange(key) {
-      return async (color) => {
+      return (color) => {
         setColorForKey(key, color.rgbaString)
-        settings[key] = color.rgbaString
-        await saveOptions()
       }
     }
     function pickerOnDone(key) {
@@ -129,10 +123,11 @@ async function init() {
 
     pickerColorBackground.onChange = pickerOnChange('colorBackground')
     pickerColorBackground.onDone = pickerOnDone('colorBackground')
+    pickerColorBackground.onClose = pickerOnDone('colorBackground')
+
     pickerColorText.onChange = pickerOnChange('colorText')
     pickerColorText.onDone = pickerOnDone('colorText')
-
-    // onDone is similar to onChange, but only called when you click 'Ok'.
+    pickerColorText.onClose = pickerOnDone('colorText')
   }
 
   $main.addEventListener('dblclick', openOptions)
