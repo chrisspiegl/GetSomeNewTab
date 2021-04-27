@@ -4,7 +4,7 @@ A minimal new tab with motivational words chosen by yourself and changeable back
 
 You can also watch a video about the idea behind and the use of the [Get Some New Tab Extension on YouTube](https://youtu.be/rUMYaon-8ZA).
 
-[![YouTube Video Thumbnail: Introducing this Extension and the Idea Behind it](http://img.youtube.com/vi/rUMYaon-8ZA/0.jpg)](http://www.youtube.com/watch?v=rUMYaon-8ZA "Youtube Video About the Idea Behind This Extension")
+[![YouTube Video Thumbnail: Introducing this Extension and the Idea Behind it](https://i3.ytimg.com/vi/rUMYaon-8ZA/maxresdefault.jpg)](http://www.youtube.com/watch?v=rUMYaon-8ZA "Youtube Video About the Idea Behind This Extension")
 
 ## Motivation
 
