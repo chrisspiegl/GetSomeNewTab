@@ -2,6 +2,10 @@
 
 A minimal new tab with motivational words chosen by yourself and changeable background/text color.
 
+You can also watch a video about the idea behind and the use of the [Get Some New Tab Extension on YouTube](https://youtu.be/rUMYaon-8ZA).
+
+[![YouTube Video Thumbnail: Introducing this Extension and the Idea Behind it](http://img.youtube.com/vi/rUMYaon-8ZA/0.jpg)](http://www.youtube.com/watch?v=rUMYaon-8ZA "Youtube Video About the Idea Behind This Extension")
+
 ## Motivation
 
 I had been using [Momentum](https://momentumdash.com/) for a few years but noticed that the design is not minmal enough for my taste and (more importantly) the photos are inspirational on one day and on others I feel like I am trapped in my own apartment and can't really get to those places any time soon… so it's pulling me down emotionally.
